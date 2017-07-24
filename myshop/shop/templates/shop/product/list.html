@@ -27,7 +27,7 @@
             <div class="item col-sm-4">
                 <a href="{{ product.get_absolute_url }}">
                     <img src="{% if product.image %}{{ product.image.url }}{% else %}
-                    {% static '/media/products/2017/07/13/sss.jpg' %}{% endif %}" class="img-responsive"
+                    {% static 'img/no-image.jpg' %}{% endif %}" class="img-responsive"
                          alt="My image" />
                 </a>
                 <a href="{{ product.get_absolute_url }}">{{ product.name }}</a><br />
