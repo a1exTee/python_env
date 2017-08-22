@@ -1,8 +1,9 @@
 #!/usr/bin/env python
 # -*- coding: utf8 -*-
 
-from django.shortcuts import render, get_object_or_404
+from django.shortcuts import render, get_object_or_404, render_to_response
 from .models import Category, Product
+
 
 # Страница с товарами
 def ProductList(request, category_slug=None):
@@ -21,4 +22,4 @@ def ProductList(request, category_slug=None):
 # Страница товара
 def ProductDetail(request, id, slug):
     product = get_object_or_404(Product, id=id, slug=slug, available=True)
-    return render(request, 'shop/product/detail.html', {'product': product}) 
+    return render(request, 'shop/product/detail.html', {'product': product})
